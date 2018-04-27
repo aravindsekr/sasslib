@@ -1,0 +1,27 @@
+{
+  "name": "sasslib",
+  "version": "1.0.0",
+  "description": "Core SASS library for layouts and typgraphy",
+  "main": "index.js",
+  "scripts": {
+    "build-task:scss-compile": "node-sass --source-map true --output-style compressed src/sass/ -o build/css",
+    "build-task:autoprefixer": "postcss build/css/*.css --use autoprefixer -d build/css",
+    "start": "npm-run-all -p build-task:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aravindsekr/sasslib.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aravindsekr/sasslib/issues"
+  },
+  "homepage": "https://github.com/aravindsekr/sasslib#readme",
+  "dependencies": {
+    "autoprefixer": "^8.3.0",
+    "node-sass": "^4.9.0",
+    "npm-run-all": "^4.1.2",
+    "postcss": "^6.0.21"
+  }
+}
