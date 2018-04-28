@@ -1,0 +1,91 @@
+
+$base-line-height: 1.5;
+
+$grid-spacing: #{$base-line-height}rem;
+
+$columns: 12;
+
+$grid-prefix: 's-col';
+$grid-lg-prefix: 's-lg-col';
+
+.s-gutter {
+  padding-left: $grid-spacing;
+  padding-right: $grid-spacing;
+}
+
+.s-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 52em;
+}
+
+.s-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/*default small columns*/
+@for $i from 1 through $columns {
+  @if $columns != $i {
+    .#{$grid-prefix}-#{$i} {
+      flex-basis: (100% / ($columns / $i));
+      max-width: (100% / ($columns / $i));
+    }
+  } @else {
+    .#{$grid-prefix}-#{$i} {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+@include desktop { 
+    @for $i from 1 through $columns {
+      @if $columns != $i {
+        .#{$grid-lg-prefix}-#{$i} {
+          flex-basis: (100% / ($columns / $i));
+          max-width: (100% / ($columns / $i));
+        }
+      } @else {
+        .#{$grid-lg-prefix}-#{$i} {
+          flex-basis: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+}
+
+/* Normal, line-height size space */
+.s-bottom-spacer {
+  margin-bottom: $grid-spacing;
+}
+
+/* No space */
+.s-reset-bottom-spacer {
+  margin-bottom: 0;
+}
+
+/* Double normal space */
+.s-bottom-spacer-2 {
+  margin-bottom: #{$base-line-height * 2}rem;
+}
+
+/* Half normal space */
+.s-bottom-spacer-half {
+  margin-bottom: #{$base-line-height / 2}rem;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.center-align {
+  text-align: center;
+}
+
+.left-align {
+  text-align: left;
+}
+
+
