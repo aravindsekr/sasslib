@@ -1,0 +1,119 @@
+
+$font-family-sans-serif: "Helvetica", Arial, sans-serif !default;
+
+$base-font-size: 1rem;
+
+$base-line-height: 1.5;
+
+$type-scale: (
+  -2: 0.5,
+  -1: 0.75,
+  0: 1,
+  1: 1.25,
+  2: 1.5,
+  3: 1.75,
+  4: 2,
+  5: 2.5
+);
+
+@mixin type-setting($level: 0) {
+  font-size: #{map-get($type-scale, $level)}rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  &:before,
+  &:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0px;
+    font-size: 100%;
+    font: inherit;
+  }
+}
+
+html {
+  font-size: $base-font-size;
+
+  @include desktop {
+    font-size: 1.125rem;
+  }
+
+}
+
+body {
+  background-color: #fff;
+  font-family: $font-family-sans-serif;
+  font-weight: 400;
+  line-height: $base-line-height;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #08c;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4 {
+  font-weight: inherit;
+}
+
+h1, .h1 {
+  @include type-setting(5);
+  line-height: 1.2;
+}
+
+h2, .h2 {
+  @include type-setting(4);
+  line-height: 1.2;
+}
+
+h3, .h3 {
+  @include type-setting(3);
+}
+
+h4, .h4 {
+  @include type-setting(2);
+}
+
+h5, .h5 {
+  @include type-setting(1);
+}
+
+h6, .h6 {
+  @include type-setting(0);
+}
+
+small, .font_small {
+  @include type-setting(-1);
+}
+
+sub,
+sup {
+  @include type-setting(-2);
+  position: relative;
+  vertical-align: baseline;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, dl, dd, figure,
+blockquote, details, hr,
+fieldset, pre, table {
+  margin: 0 0 #{$base-line-height}rem;
+}
+
+ul, ol, dl {
+  padding: 0 #{$base-line-height}rem;
+}
+
+.muted {
+  color: #999;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Standards</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../build/css/index.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/demo.css" />
+    <style>
+        .container {
+            max-width: 52em;
+            margin:0 auto;
+        }
+
+        code {
+            background: #f6f6f6;
+        }
+    </style>
+</head>
+<body class="demo-container">
+    <nav class="s-demo-header">
+        <ul class="s-container">
+            <li>
+                <a href="./index.html">Design</a>
+            </li>
+            <li>
+                <a href="./typo.html">Typography</a>
+            </li>
+            <li class="current">
+                <a href="./layout.html">Layouts</a></li>
+            </li>
+            <li>
+                <a href="./elements.html">Elements</a>
+            </li>
+            <li>
+                <a href="./forms.html">Forms</a>
+            </li>
+            <li>
+                <a href="./styleguide.html">Styleguide</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+    <h2>Grid Example</h2>
+
+    <div class="s-container">
+        <div class="s-row s-bottom-spacer">
+            <div class="s-lg-col-12 s-col-12">s-lg-col-12 s-col-12</div>
+        </div>
+
+        <div class="s-row s-bottom-spacer">
+            <div class="s-lg-col-6 s-col-12">s-lg-col-6 s-col-12</div>
+            <div class="s-lg-col-6 s-col-6">s-lg-col-6 s-col-6</div>
+        </div>
+
+        <div class="s-row s-bottom-spacer">
+            <div class="s-lg-col-4 s-col-12">s-lg-col-4 s-col-12</div>
+            <div class="s-lg-col-4 s-col-6">s-lg-col-4 s-col-6</div>
+            <div class="s-lg-col-4 s-col-6">s-lg-col-4 s-col-6</div>
+        </div>
+
+        <div class="s-row s-bottom-spacer">
+            <div class="s-lg-col-3 s-col-4">s-lg-col-6 s-col-4</div>
+            <div class="s-lg-col-3 s-col-8">s-lg-col-6 s-col-8</div>
+            <div class="s-lg-col-3 s-col-6">s-lg-col-6 s-col-6</div>
+            <div class="s-lg-col-3 s-col-6">s-lg-col-6 s-col-6</div>
+        </div>
+
+        <div class="s-row s-bottom-spacer">
+            <div class="s-lg-col-2">s-lg-col-2</div>
+            <div class="s-lg-col-2">s-lg-col-2</div>
+            <div class="s-lg-col-2">s-lg-col-2</div>
+            <div class="s-lg-col-2">s-lg-col-2</div>
+            <div class="s-lg-col-2">s-lg-col-2</div>
+            <div class="s-lg-col-2">s-lg-col-2</div>
+        </div>
+
+        <div class="s-row s-bottom-spacer">
+            <div class="s-lg-col-1">s-lg-col-1</div>
+            <div class="s-lg-col-1">s-lg-col-1</div>
+            <div class="s-lg-col-1">s-lg-col-1</div>
+            <div class="s-lg-col-1">s-lg-col-1</div>
+            <div class="s-lg-col-1">s-lg-col-1</div>
+            <div class="s-lg-col-1">s-lg-col-1</div>
+            <div class="s-lg-col-1">s-lg-col-1</div>
+            <div class="s-lg-col-1">s-lg-col-1</div>
+            <div class="s-lg-col-1">s-lg-col-1</div>
+            <div class="s-lg-col-1">s-lg-col-1</div>
+            <div class="s-lg-col-1">s-lg-col-1</div>
+            <div class="s-lg-col-1">s-lg-col-1</div>
+        </div>
+
+        <div class="s-row s-bottom-spacer">
+            <div class="s-lg-col-1">s-lg-col-1</div>
+            <div class="s-lg-col-1">s-lg-col-1</div>
+            <div class="s-lg-col-1">s-lg-col-1</div>
+            <div class="s-lg-col-1">s-lg-col-1</div>
+            <div class="s-lg-col-1">s-lg-col-1</div>
+            <div class="s-lg-col-5">s-lg-col-5</div>
+            <div class="s-lg-col-2">s-lg-col-2</div>
+        </div>
+
+        <div class="s-row s-bottom-spacer">
+            <div class="s-lg-col-7">s-lg-col-7</div>
+            <div class="s-lg-col-1">s-lg-col-1</div>
+            <div class="s-lg-col-1">s-lg-col-1</div>
+            <div class="s-lg-col-1">s-lg-col-1</div>
+            <div class="s-lg-col-1">s-lg-col-1</div>
+            <div class="s-lg-col-1">s-lg-col-1</div>
+        </div>
+    </div>
+
+    <h2>How to use Viewports</h2>
+    <p>
+        Some popular viewport sizes are:
+        <ul>
+            <li>360×640</li>
+            <li>1366×768</li>
+            <li>1920×1080</li>
+            <li>375×667</li>
+            <li>1440×900</li>
+            <li>1280×800</li>
+        </ul>
+
+        <p>
+            We have breakpoints at 768px, 992px and 1200px
+        </p>
+
+        <p>
+            The styles are Mobile first and to override in desktop, use these mixins.
+        </p>
+        <code class="language-scss">
+            @include large-mobile { ... }
+            @include tablet { ... }
+            @include desktop { ... }
+        </code>
+    </p>
+    </div>
+
+</body>
+</html>

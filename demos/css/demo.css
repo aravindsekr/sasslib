@@ -1,0 +1,47 @@
+
+body {
+    padding-bottom: 50px;
+}
+
+.s-demo-header {
+    background-color: #273c75;
+    margin-bottom: 1.5rem;
+}
+
+.s-demo-header ul a {
+    color: #f5f6fa;
+    text-decoration: none;
+}
+
+.s-demo-header ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.s-demo-header ul li {
+    flex-grow: 1;
+    padding: 15px;
+    text-align: center;
+}
+
+.current {
+    border-bottom: 3px solid #f5f6fa;
+}
+
+.s-demo-architecture {
+    text-align: center;
+}
+
+.s-row div {
+    text-align: center;
+}
+
+.s-row div:nth-child(odd) {
+    background-color: #74b9ff;
+}
+
+.s-row div:nth-child(even) {
+    background-color: #81ecec;
+}
+
+
